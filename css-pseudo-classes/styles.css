@@ -1,0 +1,22 @@
+button {
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 22px;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  padding-bottom: 22px;
+}
+
+button:hover {
+  color: white;
+  background-color: black;
+}
+
+thead {
+  color: white;
+  background-color: black;
+}
+
+tr.table-body:nth-child(odd) {
+  background-color: #d3d3d3;
+}
