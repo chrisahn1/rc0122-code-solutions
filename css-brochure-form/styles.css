@@ -1,0 +1,41 @@
+* {
+  font-family: sans-serif;
+}
+
+fieldset {
+  justify-content: center;
+}
+
+h2 {
+  font-size: 0.95rem;
+  margin-left: 150px;
+  color: #ff8f66;
+}
+
+label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+input {
+  width: 25rem;
+}
+
+select {
+  width: 25rem;
+}
+
+button {
+  margin-left: 320px;
+  color: white;
+  background-color: #ff8f66;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+}
+
+.info {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
