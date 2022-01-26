@@ -6,7 +6,7 @@ button {
 button:hover {
   color: white;
   background-color: black;
-  cursor: url("hand.cur"), pointer;
+  cursor: pointer;
 }
 
 thead {
