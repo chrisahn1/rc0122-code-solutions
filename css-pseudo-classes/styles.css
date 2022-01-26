@@ -10,6 +10,8 @@ button {
 button:hover {
   color: white;
   background-color: black;
+  /* stylelint-disable-next-line function-url-quotes */
+  cursor: url(hand.cur), pointer;
 }
 
 thead {
