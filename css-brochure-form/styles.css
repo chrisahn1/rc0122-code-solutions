@@ -2,7 +2,7 @@
   font-family: sans-serif;
 }
 
-fieldset {
+form {
   display: flex;
   justify-content: center;
 }
@@ -19,12 +19,18 @@ label {
   margin-left: 10px;
 }
 
-input {
+input,
+select {
   width: 25rem;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border-width: 1px;
 }
 
 select {
-  width: 25rem;
+  background-color: #f0f0f0;
 }
 
 button {
@@ -37,6 +43,6 @@ button {
 }
 
 .info {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 6px;
+  padding-bottom: 7px;
 }
