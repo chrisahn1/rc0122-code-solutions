@@ -3,12 +3,13 @@
 }
 
 fieldset {
+  display: flex;
   justify-content: center;
 }
 
 h2 {
   font-size: 0.95rem;
-  margin-left: 150px;
+  text-align: center;
   color: #ff8f66;
 }
 
