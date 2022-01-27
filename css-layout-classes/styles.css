@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-third {
+  width: 60%;
+}
+
+.summary-dk {
+  width: auto;
+}
+
+.summary-mario {
+  width: auto;
+}
+
+img {
+  width: 100%;
+}
+
+.dk,
+.mario {
+  width: auto;
+}
