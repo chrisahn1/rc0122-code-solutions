@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -10,23 +18,26 @@
   display: flex;
 }
 
+.column-full {
+  width: 100%;
+}
+
+.column-half {
+  width: 50%;
+}
+
 .column-one-third {
-  width: 60%;
+  width: calc(100% / 3);
 }
 
-.summary-dk {
-  width: auto;
+.column-two-thirds {
+  width: calc(200% / 3);
 }
 
-.summary-mario {
-  width: auto;
+.column-fourth {
+  width: 25%;
 }
 
 img {
   width: 100%;
-}
-
-.dk,
-.mario {
-  width: auto;
 }
