@@ -1,0 +1,48 @@
+* {
+  font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 0.95rem;
+  text-align: center;
+  color: #ff8f66;
+}
+
+label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+input,
+select {
+  width: 25rem;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+select {
+  background-color: #f0f0f0;
+}
+
+button {
+  margin-left: 320px;
+  color: white;
+  background-color: #ff8f66;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+}
+
+.info {
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
