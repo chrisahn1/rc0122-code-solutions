@@ -34,6 +34,10 @@ p {
   display: flex;
 }
 
+.column-third {
+  width: 60%;
+}
+
 img {
   width: 100%;
   padding: 40px;
@@ -52,16 +56,4 @@ img {
 
 .column-text {
   width: 80%;
-}
-
-.column-img-onboard {
-  background-color: white;
-  border-radius: 50%;
-  width: 50%;
-  margin-left: 30px;
-  padding: 2px;
-}
-
-.img-onboard {
-  width: 100%;
 }
