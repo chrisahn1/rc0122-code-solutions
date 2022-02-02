@@ -1,0 +1,186 @@
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  /* text-align: center; */
+  justify-content: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  color: #f0f0f0;
+  margin-bottom: 60px;
+}
+
+.canvas-title,
+.canvas-bottom {
+  font-family: Courier, monospace;
+}
+
+.canvas-title {
+  color: #002d62;
+}
+
+button {
+  padding: 10px 25px;
+  color: white;
+  background-color: #002d62;
+  border-radius: 5px;
+  border: none;
+}
+
+a.product,
+a.implement,
+a.about,
+a.blog {
+  color: gray;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.header {
+  justify-content: space-between;
+  display: flex;
+  width: 60%;
+  margin-left: 335px;
+  align-items: center;
+}
+
+.primary-care {
+  width: 1000px;
+  height: 500px;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.primary-care > img {
+  width: 100%;
+}
+
+.hero-description {
+  width: 50%;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: white;
+}
+
+.hero-button {
+  position: absolute;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 75%));
+  position: absolute;
+  width: 1000px;
+  height: 430px;
+  top: 70px;
+}
+
+.clinicians-prefer {
+  justify-content: center;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 70px;
+  margin-bottom: 20px;
+}
+
+.heading-prefer {
+  text-align: center;
+  justify-content: center;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  color: gray;
+}
+
+.row-prefer {
+  display: flex;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.column-half {
+  text-align: center;
+  width: 50%;
+  color: gray;
+}
+
+.row-ready {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.info-bottom {
+  justify-content: space-evenly;
+  display: flex;
+  background-color: gray;
+  color: white;
+  padding: 120px;
+}
+
+.column-links {
+  display: flex;
+}
+
+a.about-link,
+a.blog-link,
+a.product-link,
+a.implement-link,
+a.health-plans,
+a.security {
+  color: white;
+}
+
+.about-link,
+.blog-link,
+.product-link,
+.implement-link,
+.health-plans,
+.security {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.company,
+.product-bottom {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.company {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-footer {
+  margin-left: 50px;
+}
+
+.privacy-terms,
+.contact-footer {
+  color: gray;
+}
