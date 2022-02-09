@@ -58,7 +58,7 @@ var pokedex = [
 ];
 
 function renderPokemon(pokemon) {
-  var row = document.querySelector('.row');
+
   var column = document.createElement('div');
   var card = document.createElement('div');
   var image = document.createElement('img');
@@ -85,9 +85,11 @@ function renderPokemon(pokemon) {
   column.setAttribute('class', 'column-third');
   column.appendChild(card);
 
-  row.appendChild(column);
+  return column;
 }
 
+var row = document.querySelector('.row');
+
 for (var i = 0; i < pokedex.length; i++) {
-  renderPokemon(pokedex[i]);
+  row.appendChild(renderPokemon(pokedex[i]));
 }
