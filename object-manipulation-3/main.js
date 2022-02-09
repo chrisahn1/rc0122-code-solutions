@@ -1,5 +1,3 @@
-// console.log('Lodash is loaded:', typeof _ !== 'undefined');
-
 // declare object variable players that hold 4 objects with each holding a name property as string...
 // and hand property as empty array literal
 var players = {
@@ -21,14 +19,13 @@ function createDeckArray(rank, suit) {
       // tempObj holds a temporary object that holds 2 properties and will be...
       // ... appended to deck
       var tempObj = {};
-      tempObj[suit[i]] = rank[n];
+      tempObj.suit = suit[i];
+      tempObj.rank = rank[n];
       deck.push(tempObj);
     }
   }
   return deck;
 }
-
-var arrayDeck = createDeckArray(arrayRank, arraySuit);
 
 function shuffle(deck) {
   for (var i = deck.length - 1; i > 0; i--) {
@@ -41,22 +38,15 @@ function shuffle(deck) {
   return deck;
 }
 
-var shuffledDeck = shuffle(arrayDeck);
-
-function calculate(player) {
+function calculate(hand) {
   var sum = 0;
-  // goes through each card obj
-  for (var i = 0; i < player.hand.length; i++) {
-    // access the key and value of the card obj
-    for (var suit in player.hand[i]) {
-      // evaluates the rank and their number value
-      if (player.hand[i][suit] === 'ace') {
-        sum += 11;
-      } else if ((player.hand[i][suit] === 'jack') || (player.hand[i][suit] === 'queen') || (player.hand[i][suit] === 'king')) {
-        sum += 10;
-      } else {
-        sum += player.hand[i][suit];
-      }
+  for (var i = 0; i < hand.length; i++) {
+    if (hand[i].rank === 'ace') {
+      sum += 11;
+    } else if (hand[i].rank === 'jack' || hand[i].rank === 'queen' || hand[i].rank === 'king') {
+      sum += 10;
+    } else {
+      sum += hand[i].rank;
     }
   }
   return sum;
@@ -64,6 +54,9 @@ function calculate(player) {
 
 // overall game that 4 players play
 function game() {
+  var playerScores = [];
+  var arrayDeck = createDeckArray(arrayRank, arraySuit);
+  var shuffledDeck = shuffle(arrayDeck);
   // the game continues until the deck is empty
   while (shuffledDeck.length > 0) {
     var card1;
@@ -85,30 +78,68 @@ function game() {
         players[player].hand.push(card2);
       }
     }
-  }
+    // calculating total sum for each player's hand
+    playerScores.push(calculate(players.player1.hand));
+    playerScores.push(calculate(players.player2.hand));
+    playerScores.push(calculate(players.player3.hand));
+    playerScores.push(calculate(players.player4.hand));
 
-  // calling the calculate function to get total score
-  var player1score = calculate(players.player1);
-  var player2score = calculate(players.player2);
-  var player3score = calculate(players.player3);
-  var player4score = calculate(players.player4);
+    var tieScores = [];
+    var tiePlayers = [];
+    var playerName = '';
+    var max = 0;
+    for (var i = 0; i < playerScores.length; i++) {
+      if (playerScores[i] > max) {
+        max = playerScores[i];
+        if (i === 0) {
+          playerName = players.player1.name;
+        } else if (i === 1) {
+          playerName = players.player2.name;
+        } else if (i === 2) {
+          playerName = players.player3.name;
+        } else if (i === 3) {
+          playerName = players.player4.name;
+        }
+      } else if (playerScores[i] === max) {
+        tieScores.push(playerScores[i]);
+        if (i === 0) {
+          tiePlayers.push(players.player1.name);
+        } else if (i === 1) {
+          tiePlayers.push(players.player2.name);
+        } else if (i === 2) {
+          tiePlayers.push(players.player3.name);
+        } else if (i === 3) {
+          tiePlayers.push(players.player4.name);
+        }
+      }
+    }
+    console.log('playerScores: ', playerScores);
 
-  // determine the largest number among the players's score
-  var maxScore = Math.max(player1score, player2score, player3score, player4score);
+    if (tieScores.length > 0 && max === tieScores[0]) {
+      console.log('Tie!');
+      console.log(playerName + ' score: ', max);
+      for (i = 0; i < tieScores.length; i++) {
+        console.log(tiePlayers[i] + ' score: ', tieScores[i]);
+      }
+    } else {
+      if (playerName === players.player1.name) {
+        console.log(players.player1.name + ' wins! Score: ', max);
+      } else if (playerName === players.player2.name) {
+        console.log(players.player2.name + ' wins! Score: ', max);
+      } else if (playerName === players.player3.name) {
+        console.log(players.player3.name + ' wins! Score: ', max);
+      } else if (playerName === players.player4.name) {
+        console.log(players.player4.name + ' wins! Score: ', max);
+      }
+    }
+    console.log('\n');
+    // refresh hand for each player
+    players.player1.hand = [];
+    players.player2.hand = [];
+    players.player3.hand = [];
+    players.player4.hand = [];
 
-  // display winner along with the score and hand
-  if (player1score === maxScore) {
-    console.log(players.player1.name + ' won! Score: ' + maxScore);
-    console.log('total hand: ', players.player1.hand);
-  } else if (player2score === maxScore) {
-    console.log(players.player2.name + ' won! Score: ' + maxScore);
-    console.log('total hand: ', players.player2.hand);
-  } else if (player3score === maxScore) {
-    console.log(players.player3.name + ' won! Score: ' + maxScore);
-    console.log('total hand: ', players.player3.hand);
-  } else if (player4score === maxScore) {
-    console.log(players.player4.name + ' won! Score: ' + maxScore);
-    console.log('total hand: ', players.player4.hand);
+    playerScores = [];
   }
 
 }
