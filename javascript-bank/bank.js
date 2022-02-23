@@ -5,20 +5,18 @@ function Bank() {
 }
 
 Bank.prototype.openAccount = function (holder, balance) {
-  if (isNaN(balance)) {
-    return null;
-  } else if (!Number.isInteger(balance)) {
-    return null;
-  } else if (balance <= 0) {
-    return null;
-  } else if (typeof balance === 'string') {
+  if (!Number.isInteger(balance)) {
     return null;
   } else if (Number.isInteger(balance)) {
-    var obj = new Account(this.nextAccountNumber, holder);
-    obj.deposit(balance);
-    this.accounts.push(obj);
-    this.nextAccountNumber++;
-    return obj.number;
+    if (balance > 0) {
+      var obj = new Account(this.nextAccountNumber, holder);
+      obj.deposit(balance);
+      this.accounts.push(obj);
+      this.nextAccountNumber++;
+      return obj.number;
+    } else {
+      return null;
+    }
   }
 };
 

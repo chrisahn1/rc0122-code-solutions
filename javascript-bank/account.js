@@ -6,34 +6,30 @@ function Account(number, holder) {
 }
 
 Account.prototype.deposit = function (amount) {
-  if (isNaN(amount)) {
-    return false;
-  } else if (!Number.isInteger(amount)) {
-    return false;
-  } else if (amount <= 0) {
-    return false;
-  } else if (typeof amount === 'string') {
+  if (!Number.isInteger(amount)) {
     return false;
   } else if (Number.isInteger(amount)) {
-    var accountDeposit = new Transaction('deposit', amount);
-    this.transactions.push(accountDeposit);
-    return true;
+    if (amount > 0) {
+      var accountDeposit = new Transaction('deposit', amount);
+      this.transactions.push(accountDeposit);
+      return true;
+    } else {
+      return false;
+    }
   }
 };
 
 Account.prototype.withdraw = function (amount) {
-  if (isNaN(amount)) {
-    return false;
-  } else if (!Number.isInteger(amount)) {
-    return false;
-  } else if (amount <= 0) {
-    return false;
-  } else if (typeof amount === 'string') {
+  if (!Number.isInteger(amount)) {
     return false;
   } else if (Number.isInteger(amount)) {
-    var accountWithdraw = new Transaction('withdrawal', amount);
-    this.transactions.push(accountWithdraw);
-    return true;
+    if (amount > 0) {
+      var accountWithdraw = new Transaction('withdrawal', amount);
+      this.transactions.push(accountWithdraw);
+      return true;
+    } else {
+      return false;
+    }
   }
 };
 
