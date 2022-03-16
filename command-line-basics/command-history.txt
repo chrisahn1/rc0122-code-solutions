@@ -1,0 +1,180 @@
+    1  git config --global user.name "Chris Ahn"
+    2  git config --global user.email "chrisahn90@yahoo.com"
+    3  git config --global --list
+    4  cd repos
+    5  cd rc0122-code-solutions
+    6  git pull origin master
+    7  git branch javascript-prototypes
+    8  git switch javascript-prototypes
+    9  git add javascript-prototypes
+   10  git commit -m "Completed javascript-prototypes"
+   11  git push origin javascript-prototypes
+   12  git switch master
+   13  git pull origin master
+   14  git branch http-messages
+   15  git switch http-messages
+   16  http https://example.com
+   17  http --verbose https://example.com
+   18  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   19  http --body GET https://example.com > http-messages/index.html
+   20  git status
+   21  git add .
+   22  git add http-messages
+   23  git commit -m "Completed http messages"
+   24  git push origin http-messages
+   25  git switch master
+   26  cd repos
+   27  cd rc0122-code-solutions
+   28  git pull origin master
+   29  git branch javascript-constructors
+   30  git switch javascript-constructors
+   31  git add javascript-constructors
+   32  git commit -m "Completed js constructors"
+   33  git push origin javascript-constructors
+   34  git switch master
+   35  git pull origin master
+   36  git branch javascript-timers
+   37  git switch javascript-timers
+   38  git add javascript-timers
+   39  git commit -m "Completed javascript-timers"
+   40  git push origin javascript-timers
+   41  git switch master
+   42  git pull origin master
+   43  git branch javascript-ajax
+   44  git switch javascript-ajax
+   45  git add javascript-ajax
+   46  git commit -m "Completed javascript-ajax"
+   47  git push origin javascript-ajax
+   48  git switch master
+   49  cd repos
+   50  cd rc0122-code-solutions
+   51  git pull origin master
+   52  git branch javascript-bank
+   53  git switch javascript-bank
+   54  git add javascript-bank
+   55  git commit -m "Completed js bank"
+   56  git push origin javascript-bank
+   57  git add javascript-bank
+   58  git commit -m "Updated javascript-bank"
+   59  git push origin javascript-bank
+   60  git switch master
+   61  git pull origin master
+   62  git branch javascript-carousel
+   63  git switch javascript-carousel
+   64  git add javascript-carousel
+   65  git commit -m "Completed javascript-carousel"
+   66  git push origin javascript-carousel
+   67  git switch master
+   68  http https://codeforces.com/api/user.info
+   69  http --body GET https://codeforces.com/api/user.info > testing/users.json
+   70  cd repos
+   71  http --body GET https://codeforces.com/api/user.info > testing/users.json
+   72  http --body GET https://codeforces.com/api/problemset.problems > testing.problems.json
+   73  http --body GET https://codeforces.com/api/problemset.problems > testing/problems.json
+   74  http --body GET https://codeforces.com/api/contest.list > testing/list.json
+   75  http --body GET https://www.fishwatch.gov/api/species/red-snapper > testing/snapper.json
+   76  cd repos
+   77  git clone git@github.com:chrisahn1/ajax-project.git
+   78  cd ajax-project
+   79  npm ci
+   80  git pull origin master
+   81  git branch user-can-search
+   82  git switch user-can-search
+   83  git add .
+   84  git commit -m "Issue 1 tasks 1-2"
+   85  git push origin user-can-search
+   86  git add .
+   87  git commit -m "Issue 1 tasks 3-5"
+   88  git push origin user-can-search
+   89  http https://www.fishwatch.gov/api/species
+   90  http GET https://www.fishwatch.gov/api/species
+   91  CLEAR
+   92  clear
+   93  http --body GET https://www.fishwatch.gov/api/species > species.json
+   94  git add .
+   95  git commit -m "Issue 1 task 6"
+   96  git commit -m "Issue 1 task 6" --no-verify
+   97  git push origin user-can-search
+   98  cd repos
+   99  cd ajax-project
+  100  cd repos
+  101  cd ajax-project
+  102  git add .
+  103  git commit -m "Completed user can search"
+  104  git push origin user-can-search
+  105  git switch master
+  106  git pull origin master
+  107  git branch user-view-search
+  108  git switch user-view-search
+  109  git add .
+  110  git commit -m "Issue 2 user can view search"
+  111  git push origin user-view-search
+  112  git add .
+  113  git commit -m "Completed user-view-search"
+  114  git push origin user-view-search
+  115  git status
+  116  git add .
+  117  git commit -m "Updated user-view-search"
+  118  git push origin user-view-search
+  119  git switch master
+  120  git pull origin master
+  121  git branch user-view-info
+  122  git switch user-view-info
+  123  cd repos
+  124  cd rc0122-code-solutions
+  125  git pull origin master
+  126  git branch es6-const-let
+  127  git switch es6-const-let
+  128  git add es6-const-let
+  129  git commit -m "Completed es6-const-let"
+  130  git push origin es6-const-let
+  131  git switch master
+  132  git pull origin master
+  133  git branch es6-template-literals
+  134  git switch es6-template-literals
+  135  git add es6-template-literals
+  136  git commit -m "Completed es6-template-literals"
+  137  git push origin es6-template-literals
+  138  git switch master
+  139  git pull origin master
+  140  git branch es6-destructuring
+  141  git switch es6-destructuring
+  142  git add es6-destructuring
+  143  git commit -m "Completed es6-destructuring"
+  144  git push origin es6-destructuring
+  145  git switch master
+  146  git pull origin master
+  147  git branch es6-arrow-functions
+  148  git switch es6-arrow-functions
+  149  git add es6-arrow-functions
+  150  git commit -m "Completed es6-arrow-functions"
+  151  git push origin master
+  152  git push origin es6-arrow-functions
+  153  git switch master
+  154  cd repos
+  155  cd ajax-project
+  156  git add .
+  157  git commit -m "Issue 3"
+  158  git push origin user-view-info
+  159  cd repos
+  160  cd rc0122-code-solutions
+  161  git pull origin master
+  162  git branch command-line-basics
+  163  git switch command-line-basics
+  164  git switch master
+  165  cd command-lines-basics
+  166  cd command-line-basics
+  167  pwd
+  168  man man
+  169  man cat
+  170  cat NAME
+  171  man cat
+  172  cat laziness.txt
+  173  cat impatience.txt
+  174  cat hubris.txt
+  175  cat
+  176  cd repos
+  177  cd rc0122-code-solutions
+  178  cd command-line-basics
+  179  history
+  180  history > command-history.txt
