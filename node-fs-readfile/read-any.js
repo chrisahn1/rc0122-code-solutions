@@ -1,13 +1,7 @@
 const fs = require('fs');
 const filename = process.argv[2];
 
-if (filename === 'cunningham.txt') {
-  fs.readFile(filename, 'utf8', callBack);
-} else if (filename === 'dijkstra.txt') {
-  fs.readFile(filename, 'utf8', callBack);
-} else if (filename === 'hipster-ipsum.txt') {
-  fs.readFile(filename, 'utf8', callBack);
-} else if (filename === 'hopper.txt') {
+if (filename === 'cunningham.txt' || filename === 'dijkstra.txt' || filename === 'hipster-ipsum.txt' || filename === 'hopper.txt') {
   fs.readFile(filename, 'utf8', callBack);
 } else {
   console.log('INVALID');
@@ -19,5 +13,3 @@ function callBack(err, data) {
 }
 
 module.exports = callBack;
-
-// finished
