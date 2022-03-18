@@ -1,8 +1,8 @@
-const data = new Uint8Array(Buffer.from(process.argv[2]));
+const input = process.argv[2].toString();
 
 const fs = require('fs');
 
-fs.writeFile('../rc0122-code-solutions/node-fs-writefile/note.txt', data, callBack);
+fs.writeFile('note.txt', input, 'utf8', callBack);
 
 function callBack(err, data) {
   if (err) throw err;
