@@ -1,8 +1,4 @@
-// const TodoApp = require('./components/todo-app');
-
 import TodoApp from './components/todo-app';
-
-export { TodoApp };
 
 const container = document.querySelector('#app');
 
