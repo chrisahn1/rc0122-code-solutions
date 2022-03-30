@@ -53,4 +53,3 @@ class TodoApp {
 }
 
 export default TodoApp;
-// module.exports = TodoApp;

@@ -1,8 +1,4 @@
-// const toArray = require('./to-array');
-
 import toArray from './to-array';
-
-// export { toArray };
 
 function createElement(tagName, attributes, children = []) {
   const parent = document.createElement(tagName);
@@ -19,22 +15,3 @@ function createElement(tagName, attributes, children = []) {
 }
 
 export default createElement;
-
-// module.exports = createElement;
-
-// class createElement {
-//   constructor(tagName, attributes, children = []) {
-//     const parent = document.createElement(tagName);
-//     for (const name in attributes) {
-//       parent.setAttribute(name, attributes[name]);
-//     }
-//     toArray(children).forEach(child => {
-//       if (!(child instanceof HTMLElement)) {
-//         child = document.createTextNode(child);
-//       }
-//       parent.appendChild(child);
-//     });
-//     return parent;
-//   }
-
-// }

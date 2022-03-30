@@ -3,10 +3,3 @@ function toArray(value) {
 }
 
 export default toArray;
-// module.exports = toArray;
-
-// class toArray {
-//   constructor(value) {
-//     return Array.isArray(value) ? value : [value];
-//   }
-// }
