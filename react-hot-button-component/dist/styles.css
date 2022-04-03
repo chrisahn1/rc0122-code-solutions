@@ -1,0 +1,46 @@
+.container {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+.hot-button.freeze {
+  color: white;
+  background-color: black;
+}
+
+.hot-button.cold {
+  color: white;
+  background-color: rgb(53 28 117);
+}
+
+.hot-button.cool {
+  color: white;
+  background-color: rgb(103 78 167);
+}
+
+.hot-button.tepid {
+  color: white;
+  background-color: rgb(224 102 102);
+}
+
+.hot-button.warm {
+  color: black;
+  background-color: rgb(246 178 107);
+}
+
+.hot-button.hot {
+  color: black;
+  background-color: yellow;
+}
+
+.hot-button.nuclear {
+  color: black;
+  background-color: white;
+}
