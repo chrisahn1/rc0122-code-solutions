@@ -27,7 +27,7 @@ app.post('/api/auth/sign-up', (req, res, next) => {
   /* your code starts here */
   argon2.hash(password)
     .then(hashedPassword => {
-      const sql = 'insert into "users" ("username", "hashedPassword") values ($1, $2) returning * ';
+      const sql = 'insert into "users" ("username", "hashedPassword") values ($1, $2) returning "userId", "username", "createdAt" ';
       const params = [username, hashedPassword];
       db.query(sql, params)
         .then(result => {
